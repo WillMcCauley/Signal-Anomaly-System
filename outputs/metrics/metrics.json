@@ -1,0 +1,189 @@
+{
+  "dataset_source": "synthetic turbofan demo",
+  "rows": {
+    "train": 11009,
+    "validation": 2753,
+    "test": 3676
+  },
+  "baseline_isolation_forest": {
+    "threshold": 0.5835718328270701,
+    "validation_f1_at_threshold": 0.7028985507246377,
+    "test_precision": 0.7079934747145188,
+    "test_recall": 0.7368421052631579,
+    "test_f1": 0.7221297836938436,
+    "test_roc_auc": 0.9474767674067768,
+    "test_pr_auc": 0.7697900531738241,
+    "false_positive_rate": 0.057985098801425335
+  },
+  "advanced_event_classifier": {
+    "macro_f1": 0.796320161515828,
+    "classification_report": {
+      "normal_operation": {
+        "precision": 0.9222972972972973,
+        "recall": 0.9761620977353993,
+        "f1-score": 0.9484655471916619,
+        "support": 2517.0
+      },
+      "degradation_warning": {
+        "precision": 0.7112299465240641,
+        "recall": 0.4666666666666667,
+        "f1-score": 0.5635593220338984,
+        "support": 570.0
+      },
+      "critical_failure_risk": {
+        "precision": 0.8432601880877743,
+        "recall": 0.9134125636672326,
+        "f1-score": 0.8769356153219234,
+        "support": 589.0
+      },
+      "accuracy": 0.8871055495103374,
+      "macro avg": {
+        "precision": 0.8255958106363784,
+        "recall": 0.7854137760230996,
+        "f1-score": 0.796320161515828,
+        "support": 3676.0
+      },
+      "weighted avg": {
+        "precision": 0.8769052278562876,
+        "recall": 0.8871055495103374,
+        "f1-score": 0.8773209122049369,
+        "support": 3676.0
+      }
+    }
+  },
+  "top_alert_examples": [
+    {
+      "unit_id": 20,
+      "cycle": 131,
+      "anomaly_score": 0.9512267745036058,
+      "probability_failure": 0.999986316197915,
+      "predicted_event_type": "critical_failure_risk",
+      "severity": "critical",
+      "recommended_action": "escalate and inspect immediately",
+      "explanation": "critical failure risk detected with critical severity. Primary contributors: sensor_4_spectral_energy, sensor_3_delta, sensor_18_roll_std, sensor_4_roll_std. Combined model risk=1.00; recommended action: escalate and inspect immediately.",
+      "contributing_signals": [
+        "sensor_4_spectral_energy",
+        "sensor_3_delta",
+        "sensor_18_roll_std",
+        "sensor_4_roll_std"
+      ]
+    },
+    {
+      "unit_id": 76,
+      "cycle": 191,
+      "anomaly_score": 1.0,
+      "probability_failure": 0.9999863136958785,
+      "predicted_event_type": "critical_failure_risk",
+      "severity": "critical",
+      "recommended_action": "escalate and inspect immediately",
+      "explanation": "critical failure risk detected with critical severity. Primary contributors: sensor_5_spectral_energy, sensor_17_roll_std, sensor_5_delta, sensor_12_roll_std. Combined model risk=1.00; recommended action: escalate and inspect immediately.",
+      "contributing_signals": [
+        "sensor_5_spectral_energy",
+        "sensor_17_roll_std",
+        "sensor_5_delta",
+        "sensor_12_roll_std"
+      ]
+    },
+    {
+      "unit_id": 76,
+      "cycle": 194,
+      "anomaly_score": 0.9667913145691298,
+      "probability_failure": 0.9999859631716581,
+      "predicted_event_type": "critical_failure_risk",
+      "severity": "critical",
+      "recommended_action": "escalate and inspect immediately",
+      "explanation": "critical failure risk detected with critical severity. Primary contributors: sensor_5_spectral_energy, sensor_12_roll_std, sensor_17_roll_std, sensor_17_trend. Combined model risk=1.00; recommended action: escalate and inspect immediately.",
+      "contributing_signals": [
+        "sensor_5_spectral_energy",
+        "sensor_12_roll_std",
+        "sensor_17_roll_std",
+        "sensor_17_trend"
+      ]
+    },
+    {
+      "unit_id": 20,
+      "cycle": 130,
+      "anomaly_score": 0.9727250284360567,
+      "probability_failure": 0.9999854292160344,
+      "predicted_event_type": "critical_failure_risk",
+      "severity": "critical",
+      "recommended_action": "escalate and inspect immediately",
+      "explanation": "critical failure risk detected with critical severity. Primary contributors: sensor_8_delta, sensor_4_spectral_energy, sensor_4_roll_std, sensor_18_roll_std. Combined model risk=1.00; recommended action: escalate and inspect immediately.",
+      "contributing_signals": [
+        "sensor_8_delta",
+        "sensor_4_spectral_energy",
+        "sensor_4_roll_std",
+        "sensor_18_roll_std"
+      ]
+    },
+    {
+      "unit_id": 76,
+      "cycle": 195,
+      "anomaly_score": 1.0,
+      "probability_failure": 0.9999852305543587,
+      "predicted_event_type": "critical_failure_risk",
+      "severity": "critical",
+      "recommended_action": "escalate and inspect immediately",
+      "explanation": "critical failure risk detected with critical severity. Primary contributors: sensor_17_delta, sensor_8_delta, sensor_5_spectral_energy, sensor_5_delta. Combined model risk=1.00; recommended action: escalate and inspect immediately.",
+      "contributing_signals": [
+        "sensor_17_delta",
+        "sensor_8_delta",
+        "sensor_5_spectral_energy",
+        "sensor_5_delta"
+      ]
+    },
+    {
+      "unit_id": 81,
+      "cycle": 149,
+      "anomaly_score": 1.0,
+      "probability_failure": 0.999984769374579,
+      "predicted_event_type": "critical_failure_risk",
+      "severity": "critical",
+      "recommended_action": "escalate and inspect immediately",
+      "explanation": "critical failure risk detected with critical severity. Primary contributors: sensor_16_roll_std, sensor_14_delta, sensor_5_spectral_energy, sensor_5_roll_std. Combined model risk=1.00; recommended action: escalate and inspect immediately.",
+      "contributing_signals": [
+        "sensor_16_roll_std",
+        "sensor_14_delta",
+        "sensor_5_spectral_energy",
+        "sensor_5_roll_std"
+      ]
+    },
+    {
+      "unit_id": 12,
+      "cycle": 223,
+      "anomaly_score": 0.6692541450605934,
+      "probability_failure": 0.9999844093177356,
+      "predicted_event_type": "critical_failure_risk",
+      "severity": "critical",
+      "recommended_action": "escalate and inspect immediately",
+      "explanation": "critical failure risk detected with critical severity. Primary contributors: sensor_12_roll_std, sensor_4_delta, sensor_13_delta, sensor_20_roll_std. Combined model risk=1.00; recommended action: escalate and inspect immediately.",
+      "contributing_signals": [
+        "sensor_12_roll_std",
+        "sensor_4_delta",
+        "sensor_13_delta",
+        "sensor_20_roll_std"
+      ]
+    },
+    {
+      "unit_id": 54,
+      "cycle": 149,
+      "anomaly_score": 0.8025050972980557,
+      "probability_failure": 0.9999840030178614,
+      "predicted_event_type": "critical_failure_risk",
+      "severity": "critical",
+      "recommended_action": "escalate and inspect immediately",
+      "explanation": "critical failure risk detected with critical severity. Primary contributors: sensor_5_spectral_energy, sensor_10_delta, sensor_2_delta, sensor_5. Combined model risk=1.00; recommended action: escalate and inspect immediately.",
+      "contributing_signals": [
+        "sensor_5_spectral_energy",
+        "sensor_10_delta",
+        "sensor_2_delta",
+        "sensor_5"
+      ]
+    }
+  ],
+  "figures": {
+    "signal_alert_plot": "/Users/will/Documents/CodexRequests/signal_anomaly_detection/outputs/figures/unit_7_signal_alerts.svg",
+    "confusion_matrix": "/Users/will/Documents/CodexRequests/signal_anomaly_detection/outputs/figures/event_confusion_matrix.svg",
+    "feature_importance": "/Users/will/Documents/CodexRequests/signal_anomaly_detection/outputs/figures/feature_importance.svg"
+  }
+}
